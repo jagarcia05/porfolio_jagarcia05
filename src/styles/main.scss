@@ -1,0 +1,14 @@
+// Importación de variables y configuraciones globales
+@use "global" as *; // Aquí defines las variables globales (colores, tipografía, medidas, etc.)
+@use "layout" as *;  // Aquí puedes tener estilos generales del layout, como grids o flexbox
+@use "header" as *;  // Estilos específicos para el header
+@use "presentacion" as *; // Estilos para la sección de presentación
+@use "experiencia" as *; // Estilos para la sección de experiencia laboral
+@use "proyectos" as *; // Estilos para la sección de proyectos
+@use "habilidades" as *; // Estilos para la sección de habilidades
+@use "sobremi" as *; // Estilos para la sección sobre mí
+@use "contacto" as *; // Estilos para la sección de contacto
+@use "footer" as *; // Estilos para el pie de página
+
+// Aquí puedes agregar más estilos generales si es necesario
+

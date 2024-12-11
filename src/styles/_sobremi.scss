@@ -1,0 +1,97 @@
+@use './global' as *;
+
+main {
+  #sobre-mi {
+    margin-top: 5rem;
+    width: 70%;
+    text-align: left;
+
+    h1 {
+      color: $texto-principal;  // Color de título por defecto (modo oscuro)
+        text-align: left;
+      i {
+        margin-right: 20px;
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      color: $texto-principal;  // Color de texto por defecto (modo oscuro)
+     text-align: left;
+      .naranja {
+        color: $amarillo-texto-y-botones;
+      }
+    }
+  }
+
+  // Estilos para el modo claro
+  body.light-mode & {
+    #sobre-mi {
+      h1 {
+        color: $texto-principal-blanco;  // Cambiar color de título en modo claro
+      }
+
+      p {
+        color: $texto-principal-blanco;  // Cambiar color de texto en modo claro
+
+        .naranja {
+          color: $azul-texto-botonoes;  // Cambiar color de la clase 'naranja' en modo claro
+        }
+      }
+    }
+  }
+
+  // Responsividad
+
+  @include respond-to('small') {
+    #sobre-mi {
+      width: 90%;  // Aumentar el ancho para pantallas pequeñas
+      margin-top: 3rem; // Reducir el margen superior en pantallas pequeñas
+
+      h1 {
+        i{
+            margin-right: 10px;
+        }
+        font-size: 2rem; // Reducir tamaño del título en pantallas pequeñas
+      }
+
+      p {
+        font-size: 1rem; // Reducir tamaño del texto en pantallas pequeñas
+      }
+    }
+  }
+
+  @include respond-to('medium') {
+    #sobre-mi {
+      width: 100%;  // Ajustar el ancho para pantallas medianas
+      margin-top: 4rem;  // Ajustar el margen superior para pantallas medianas
+
+      h1 {
+        font-size: 2.5rem;
+        text-align: left;
+        i{
+            margin-right: 10px;
+        }  // Ajustar el tamaño del título
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.2rem;  // Ajustar el tamaño del texto
+      }
+    }
+  }
+
+  @include respond-to('large') {
+    #sobre-mi {
+      width: 100%;  // Mantener el ancho original para pantallas grandes
+
+      h1 {
+        font-size: 3rem;  // Tamaño del título en pantallas grandes
+      }
+
+      p {
+        font-size: 1.5rem;  // Tamaño del texto en pantallas grandes
+      }
+    }
+  }
+}

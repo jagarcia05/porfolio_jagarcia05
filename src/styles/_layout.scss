@@ -1,0 +1,47 @@
+@use 'global' as *;
+
+// Estilos base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  z-index: 1;
+  background: linear-gradient(to bottom, $fondo-header, $fondo-primario);
+  font-family: $font-family-blanco;
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  h1, h2, p, li {
+    font-size: $texto-base;
+    color: $texto-principal;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  h1 {
+    font-size: $h1;
+  }
+
+  h2 {
+    font-size: $h2;
+  }
+}
+
+// Modo claro
+body.light-mode {
+  background: linear-gradient(to bottom, $fondo-header-blanco, $fondo-principal-blanco);
+  color: $texto-principal-blanco;
+
+  h1, h2, p, li {
+    color: $texto-principal-blanco;
+  }
+}
+    
+
+
+

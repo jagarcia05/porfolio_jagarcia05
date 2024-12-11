@@ -1,0 +1,149 @@
+@use './global' as *;
+
+main {
+
+  #bienvenida {
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: $texto-principal;
+      font-size: 3rem;
+      text-align: center;
+
+      span {
+        color: $amarillo-texto-y-botones;
+      }
+    }
+
+    .contacto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      flex-wrap: wrap; // Permite que los botones se apilen en pantallas pequeñas
+
+      .btn-contactame {
+        background-color: $amarillo-texto-y-botones;
+        color: $texto-principal;
+        padding: 1rem 2rem;
+        border: 1px solid $amarillo-texto-y-botones;
+        border-radius: 5px;
+        margin-right: 1rem;
+        margin-bottom: 1rem; // Añadir margen inferior para mejor separación
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $color-hover;
+        }
+      }
+
+      .btn-linkedin {
+        background-color: $fondo-header;
+        color: $amarillo-texto-y-botones;
+        padding: 1rem 2rem;
+        border: 1px solid $amarillo-texto-y-botones;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        margin-bottom: 1rem; // Añadir margen inferior para mejor separación
+
+        &:hover {
+          background-color: $fondo-primario;
+        }
+
+        a {
+          color: $amarillo-texto-y-botones;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // Estilos para el modo claro
+  body.light-mode & {
+    #bienvenida {
+      h1 {
+        color: $texto-principal-blanco;
+        
+        span {
+          color: $azul-texto-botonoes;  // Cambiar color de resaltado en modo claro
+        }
+      }
+
+      .contacto {
+        .btn-contactame {
+          background-color: $color-hover-blanco;
+          color: $texto-principal-blanco;
+          border: 1px solid $color-hover-blanco;
+
+          &:hover {
+            background-color: $azul-texto-botonoes;  // Hover con color claro
+          }
+        }
+
+        .btn-linkedin {
+          background-color: $fondo-header-blanco;
+          color: $azul-texto-botonoes;
+          border: 1px solid $azul-texto-botonoes;
+
+          &:hover {
+            background-color: $fondo-primario;
+          }
+
+          a {
+            color: $azul-texto-botonoes;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsividad
+  @include respond-to('small') {
+    #bienvenida {
+      height: auto; // Ajusta la altura para pantallas pequeñas
+      padding: 2rem 0; // Añade padding en pantallas pequeñas
+      h1 {
+        font-size: 2.5rem; 
+        
+      }
+
+      .contacto {
+        flex-direction: column; // Cambia los botones a columna en pantallas pequeñas
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  @include respond-to('medium') {
+    #bienvenida {
+      h1 {
+        font-size: 2.8rem; // Ajusta el tamaño del encabezado en pantallas medianas
+      }
+
+      .contacto {
+        align-items: center;
+      
+        display: flex;
+        flex-direction: column;
+        .btn-contactame, .btn-linkedin {
+          padding: 1rem 1.8rem; // Ajusta el padding en pantallas medianas
+        }
+      }
+    }
+  }
+
+  @include respond-to('large') {
+    #bienvenida {
+      .contacto {
+        .btn-contactame, .btn-linkedin {
+          padding: 1rem 2.5rem; // Ajusta el padding para pantallas grandes
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@use './global' as *;
+
+main {
+  .experiencia-laboral {
+    display: flex;
+    gap: 10px;
+    color: $texto-principal;
+    border-radius: 8px;
+
+    .contenido {
+      i {
+        margin-right: 20px;
+      }
+      .titulo {
+        margin-bottom: 10px;
+      }
+
+      .item {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 10px;
+          width: 5px;
+          height: 5px;
+          background-color: $amarillo-texto-y-botones;
+          border-radius: 50%;
+        }
+
+        .cargo {
+          display: block;
+          font-weight: bold;
+          color: $amarillo-texto-y-botones;
+          padding: 0;
+          text-align: left;
+        }
+
+        .empresa {
+          display: block;
+          margin: 5px 0;
+        }
+
+        .fechas {
+          display: block;
+          color: $texto-principal;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .texto {
+      display: flex;
+      align-items: center;
+      margin-top: 3rem;
+      margin-left: 3rem;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  // Modo claro
+  body.light-mode & {
+    .experiencia-laboral {
+      color: $texto-principal-blanco;
+
+      .contenido {
+        .item {
+          &::before {
+            background-color: $azul-texto-botonoes;
+          }
+
+          .cargo {
+            color: $azul-texto-botonoes;
+          }
+
+          .fechas {
+            color: $texto-principal-blanco;
+          }
+        }
+      }
+
+      .texto {
+        p {
+          color: $texto-principal-blanco;
+        }
+      }
+    }
+  }
+
+  // Responsividad
+  @include respond-to("medium") {
+    .experiencia-laboral {
+      flex-direction: column;
+      gap: 15px;
+      .contenido {
+        h1{
+          text-align: left;
+        }
+        .item {
+          padding-left: 15px;
+          &::before {
+            width: 4px;
+            height: 4px;
+          }
+        }
+      }
+      .texto {
+        margin-top: 1rem;
+        margin-left: 0;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  @include respond-to("small") {
+    .experiencia-laboral {
+      .contenido {
+        .item {
+          padding-left: 15px;
+          &::before {
+            width: 4px;
+            height: 4px;
+          }
+
+          .cargo {
+            font-size: 16px;
+          }
+
+          .fechas {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .texto {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

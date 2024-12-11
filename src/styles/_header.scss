@@ -1,0 +1,81 @@
+@use './global' as *;
+header {
+  width: 100%;
+
+  nav {
+    background: linear-gradient(to bottom, $fondo-header, $fondo-primario);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin: 0 auto;
+    width: 50%;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 1rem;
+
+      li {
+        margin: 0;
+
+        a {
+          color: $texto-principal;
+          text-decoration: none;
+          padding: 1rem;
+
+          &:hover {
+            color: $color-hover;
+          }
+        }
+      }
+    }
+  }
+
+  // Modo claro
+  body.light-mode & nav {
+    background: linear-gradient(to bottom, $fondo-header-blanco, $fondo-principal-blanco);
+
+    ul li a {
+      color: $texto-principal-blanco;
+
+      &:hover {
+        color: $color-hover-blanco;
+      }
+    }
+  }
+
+  // Responsividad
+  @include respond-to('small') {
+    nav {
+      width: 100%;
+      
+      ul {
+        justify-content: flex-start;
+
+        li {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include respond-to('medium') {
+    nav {
+      width: 80%;
+
+      ul {
+        flex-direction: row;
+      }
+    }
+  }
+
+  @include respond-to('large') {
+    nav {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@use './global' as *;
+
+main {
+  #habilidades {
+    margin-top: 4rem;
+
+    .title {
+      text-align: left;
+      padding: 0;
+      margin: 0;
+
+      i {
+        margin-right: 20px;
+      }
+    }
+
+    .skills-list {
+      list-style-type: none; // Elimina los puntos predeterminados
+      text-align: start;
+      padding-left: 0;
+    }
+
+    .skill-item {
+      padding-left: 20px;
+      margin-bottom: 10px;
+      text-align: start;
+      position: relative; // Asegura que los puntos personalizados se posicionen correctamente
+
+      // Agregar los puntos personalizados con pseudo-elemento
+      &::before {
+        content: ''; // Se necesita para generar un pseudo-elemento
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 5px;
+        height: 5px; // Tamaño del punto
+        background-color: orange; // Color naranja para el punto
+        border-radius: 50%; // Hace que el punto sea redondo
+      }
+    }
+  }
+
+  // Estilos para el modo claro
+  body.light-mode & {
+    #habilidades {
+      .skills-list {
+        .skill-item {
+          &::before {
+            background-color: $azul-texto-botonoes; // Cambia el color del punto al azul
+          }
+        }
+      }
+
+      .title {
+        color: $texto-principal-blanco; // Cambia el color del texto al color claro
+      }
+
+      .skill-item {
+        color: $texto-principal-blanco; // Cambia el color de los ítems al color claro
+      }
+    }
+  }
+
+  // Responsividad
+  @include respond-to('small') {
+    #habilidades {
+        .container{
+            h1{
+                i{
+                    margin-right: 10px;
+                }  
+              }
+         
+    
+          .skills-list {
+            padding-left: 0;
+          }
+    
+         
+        }
+       
+    }
+  }
+
+  @include respond-to('medium') {
+    #habilidades {
+      
+      .skills-list {
+        padding-left: 0;
+      }
+
+     
+    }
+  }
+
+  @include respond-to('large') {
+    #habilidades {
+     
+      .skills-list {
+        padding-left: 0;
+      }
+
+      .skill-item {
+        font-size: 18px; // Tamaño de los ítems por defecto en pantallas grandes
+        padding-left: 20px; // Padding por defecto en pantallas grandes
+
+        &::before {
+          width: 6px; // Tamaño estándar de los puntos en pantallas grandes
+          height: 6px;
+        }
+      }
+    }
+  }
+}

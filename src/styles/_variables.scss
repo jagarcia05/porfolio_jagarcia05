@@ -1,0 +1,33 @@
+// Modo oscuro
+$modo-oscuro: true;
+$fondo-header: #101223;
+$fondo-primario: #393b6a;
+$texto-principal: #ffffff;
+$amarillo-texto-y-botones: #ffc107;
+$color-hover: #ffa000;
+
+// Modo claro
+$modo-claro: false;
+$fondo-header-blanco: #e0e0e0;
+$fondo-principal-blanco: #a0c6e5;
+$texto-principal-blanco: #000000;
+$azul-texto-botonoes: #007bff;
+$color-hover-blanco: #0056b3;
+
+
+// Variables de tipografía
+$texto-secundario: 16px;
+$texto-base: 18px;
+$h2: 28px;
+$h1: 40px;
+
+// Variables de medidas
+$borde: 1rem;  // Asignamos un valor válido para el borde
+$padding: 1rem; // Asignamos un valor válido para el padding
+
+
+// Variables de tipografía adicionales para el modo claro
+$font-family-base: 'Arial', sans-serif; // Fuente base
+$font-family-blanco: 'Arial', sans-serif; // Fuente para el modo claro si es diferente
+
+

@@ -139,7 +139,7 @@
     themeToggle.addEventListener('click', (e) => {
       e.preventDefault(); // Evitar la acción predeterminada del enlace
   
-      // Cambiar entre los modos
+     
       if (body.classList.contains('light-mode')) {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
@@ -153,7 +153,7 @@
       }
     });
   
-    // Función para actualizar el icono
+   
     function updateIcon(theme, icon) {
       if (theme === 'light-mode') {
         icon.classList.remove('fa-moon');

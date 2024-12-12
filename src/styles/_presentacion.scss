@@ -105,7 +105,7 @@ main {
   @include respond-to('small') {
     #bienvenida {
       height: auto; // Ajusta la altura para pantallas pequeñas
-      padding: 2rem 0; // Añade padding en pantallas pequeñas
+      padding: 5rem 0; // Añade padding en pantallas pequeñas
       h1 {
         font-size: 2.5rem; 
         
@@ -115,6 +115,7 @@ main {
         flex-direction: column; // Cambia los botones a columna en pantallas pequeñas
         justify-content: center;
         align-items: center;
+        text-align: center;
       }
     }
   }
@@ -126,12 +127,15 @@ main {
       }
 
       .contacto {
-        align-items: center;
+        
       
         display: flex;
         flex-direction: column;
+        text-align: center;
         .btn-contactame, .btn-linkedin {
-          padding: 1rem 1.8rem; // Ajusta el padding en pantallas medianas
+          padding: 1rem 1.8rem; 
+          margin: 0 auto;
+          margin-top: 1rem; // Añade margen superior para separar los botones
         }
       }
     }

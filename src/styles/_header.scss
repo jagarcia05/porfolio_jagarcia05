@@ -56,8 +56,10 @@ header {
         justify-content: flex-start;
 
         li {
+          padding: 0;
           width: 100%;
           text-align: center;
+          font-size: 15px;
         }
       }
     }
@@ -65,10 +67,13 @@ header {
 
   @include respond-to('medium') {
     nav {
-      width: 80%;
+      width: 100%;
 
       ul {
         flex-direction: row;
+        li{
+          padding: 0;
+        }
       }
     }
   }

@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" crossorigin href="/porfolio_jagarcia05/assets/main-SGmfbHDA.css">
+  <link rel="stylesheet" crossorigin href="/porfolio_jagarcia05/assets/main-j_VIGaSo.css">
 </head>
 
 <body>
@@ -26,10 +26,10 @@
     <main>
         <section id="bienvenida" data-aos="fade-up">
             <h1><span>¡Hola! Soy</span> José Antonio García Pascual</h1>
-            <p data-aos="zoom-in">Técnico Superior en Desarrollo de Aplicaciones Web <br>
+            <p>Técnico Superior en Desarrollo de Aplicaciones Web <br>
                 Apasionado por crear soluciones técnicas innovadoras.</p>
             <div class="contacto">
-                <button class="btn-contactame" data-aos="flip-left">Contactame</button>
+                <button class="btn-contactame" data-aos="flip-left"> <a href="#contacto"></a> Contactame</button>
                 <button class="btn-linkedin" data-aos="flip-right"><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></button>
             </div>
         </section>
@@ -139,7 +139,7 @@
     themeToggle.addEventListener('click', (e) => {
       e.preventDefault(); // Evitar la acción predeterminada del enlace
   
-      // Cambiar entre los modos
+     
       if (body.classList.contains('light-mode')) {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
@@ -153,7 +153,7 @@
       }
     });
   
-    // Función para actualizar el icono
+   
     function updateIcon(theme, icon) {
       if (theme === 'light-mode') {
         icon.classList.remove('fa-moon');

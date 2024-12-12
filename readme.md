@@ -119,63 +119,56 @@ my-project/
 
 - **Uso**: Animaciones avanzadas al cargar el contenido.
 
-**Descripción de las Secciones**
+# Descripción de las Secciones
 
-**Header**
-
+## **Header**
 - Contiene el menú de navegación con enlaces a las secciones principales.
 - Botón de modo oscuro/claro: Permite alternar entre los modos de tema.
 
-**Sección "Bienvenida"**
-
+## **Sección "Bienvenida"**
 - Presentación del autor.
 - Botones de acción para contactar y visitar LinkedIn.
 - Animaciones configuradas con AOS y GSAP.
 
-**Sección "Experiencia Laboral"**
-
+## **Sección "Experiencia Laboral"**
 - Detalla experiencia previa como socorrista.
 - Usa animaciones AOS para el contenido y los textos.
 
-**Sección "Habilidades Técnicas"**
-
+## **Sección "Habilidades Técnicas"**
 - Lista de habilidades organizadas.
 - Cada elemento tiene animaciones configuradas con AOS.
 
-**Sección "Proyectos"**
-
+## **Sección "Proyectos"**
 - Destaca dos proyectos:
   - Portal Ayuntamiento de Noez.
   - Video Games Library Web App.
 - Usa **Vanilla Tilt** para el efecto de inclinación en las imágenes.
 
-**Sección "Sobre Mí"**
-
+## **Sección "Sobre Mí"**
 - Describe los intereses y metas del autor.
 - Usa texto resaltado para palabras clave.
 
-**Sección "Contacto"**
-
+## **Sección "Contacto"**
 - Proporciona información de contacto: teléfono, correo y dirección.
 - Enlace de correo directo usando mailto.
 
-**Footer**
-
+## **Footer**
 - Contiene el copyright del autor.
 
-**Scripts Personalizados**
 
-**Alternar Tema (Modo Oscuro/Claro)**
+# **Scripts Personalizados**
 
+## **Alternar Tema (Modo Oscuro/Claro)**
 - **Funcionalidad**: Permite cambiar entre los modos oscuro y claro.
-- **Persistencia**: Guarda la preferencia del usuario en localStorage.
-````javascript
+- **Persistencia**: Guarda la preferencia del usuario en `localStorage`.
+
+```javascript
 const savedTheme = localStorage.getItem('theme') || 'dark-mode';
 
 body.classList.add(savedTheme);
-````
+```
 
-**Animaciones de Carga**
+## **Animaciones de Carga**
 
 - **Configuradas con GSAP**:
 ````javascript
@@ -195,13 +188,13 @@ ease: "power4.out",
 });
 ````
 
-**Estilos**
+# **Estilos**
 
 - **Archivo**: src/styles/main.scss
 - **Preprocesador**: Sass.
 - **Organización**: Estilos organizados en variables y módulos reutilizables.
 
-**Futuras Mejoras**
+## **Futuras Mejoras**
 
 1. Agregar una sección para testimonios o recomendaciones.
 2. Mejorar la accesibilidad (uso de etiquetas ARIA).

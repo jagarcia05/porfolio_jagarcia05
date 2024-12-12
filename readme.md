@@ -6,21 +6,19 @@ Este documento describe la estructura y funcionalidades de la página web person
 
 ## **Índice**
 
-1. Introducción  
-2. Estructura del Proyecto  
-    - Estructura de Carpetas  
-    - Archivos Principales  
-    - Recursos Estáticos  
-3. Librerías y Recursos Externos  
-    - FontAwesome  
-    - AOS (Animate On Scroll)  
-    - GSAP (GreenSock Animation Platform)  
-4. Descripción de las Secciones  
-5. Scripts Personalizados  
-6. Estilos  
-7. Futuras Mejoras  
-
----
+1. [Introducción](#introducción)  
+2. [Estructura del Proyecto](#estructura-del-proyecto)  
+    - [Estructura de Carpetas](#estructura-de-carpetas)  
+    - [Archivos Principales](#archivos-principales)  
+    - [Recursos Estáticos](#recursos-estáticos)  
+3. [Librerías y Recursos Externos](#librerías-y-recursos-externos)  
+    - [FontAwesome](#fontawesome)  
+    - [AOS (Animate On Scroll)](#aos-animate-on-scroll)  
+    - [GSAP (GreenSock Animation Platform)](#gsap-greensock-animation-platform)  
+4. [Descripción de las Secciones](#descripción-de-las-secciones)  
+5. [Scripts Personalizados](#scripts-personalizados)  
+6. [Estilos](#estilos)  
+7. [Futuras Mejoras](#futuras-mejoras)
 
 ## **Introducción**
 
@@ -200,3 +198,6 @@ ease: "power4.out",
 2. Mejorar la accesibilidad (uso de etiquetas ARIA).
 3. Optimizar el rendimiento mediante la minificación de CSS y JavaScript.
 4. Implementar pruebas responsivas para dispositivos adicionales.
+
+# **Enlaces**
+- **Enlace Repositorio**: https://github.com/jagarcia05/porfolio_jagarcia05.git

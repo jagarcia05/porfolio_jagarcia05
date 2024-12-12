@@ -202,3 +202,4 @@ ease: "power4.out",
 # **Enlaces**
 - [Enlace Repositorio](https://github.com/jagarcia05/porfolio_jagarcia05.git)
 - [Demo Proyecto](https://jagarcia05.github.io/porfolio_jagarcia05/)
+-[figma Link](https://www.figma.com/design/pU6CS9DTmJgFPNVgCWdMGG/porfolio?m=auto&t=hpaS90TZDkLE6Roa-6)
